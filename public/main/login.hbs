@@ -1,0 +1,156 @@
+<!-- font -->  
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        :root {--accent: #FFA500;
+--color1: linear-gradient(to bottom right, #FFA500, #FF5F1F);
+--transparent: rgb(255, 255, 255, 0.3);}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+   
+    background-image: url("https://i.pinimg.com/originals/1b/0d/79/1b0d79246c579ef24e33b742d6e3b3da.jpg");   
+    background-size: cover;
+   
+    background-position: center;
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    min-height: 100vh;
+    
+    margin: 0;
+
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  background-color: var(--transparent);
+  color: var(--accent);
+  position: absolute;
+  padding: 10px 30px;
+  margin-top: 130px;
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--transparent);
+  border-radius: 16px;
+  text-align: center;
+  align-content: center;
+  align-content: center;
+  
+}
+
+input {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin: 10px 0;
+  height: 40px;
+  width: auto;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  background: var(--color1);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 0;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+}
+
+button:hover {
+  transform: translatey(2px);
+  box-shadow: none;
+}
+
+.socials {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 40px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+::placeholder {
+            color: #341709; 
+            font-size: medium;/* Change to the color you desire */
+        }
+        .custom-link {
+    color: #4B0E00;
+  }
+  #clickableText:hover{
+    text-decoration: underline;
+
+  }
+   </style>
+    <!-- start here -->  
+
+      <body id="body" >
+
+    
+    <form class="form" action="/" method="post">
+     
+      
+        <h2>Sign In</h2>
+    
+
+        <input type="email"  name="email" placeholder="Your email" style="color:#ffffff">
+        <input type="password" name="password"  placeholder="Your password" style="color:#ffffff">
+        <button type="submit" id="signUp_btn" style="cursor:pointer;" >Sign In</button>
+        <p style="color:#4B0E00">Don't have a account?</p>
+        <p id="clickableText" style="color:#4B0E00;margin-top: 1px;cursor: pointer;">Sign Up</p>
+
+    </form>
+        <!-- <div class="socials">
+       <img src="https://i.pinimg.com/originals/b3/da/ac/b3daac6815ebf1516a545db6c3e40a36.jpg" alt="">
+       <img src="https://icones.pro/wp-content/uploads/2021/02/facebook-icone-orange.png" alt="">    
+       <img src="https://i.pinimg.com/originals/ac/cf/1d/accf1d80314304e11e2bcf9537e13304.jpg" alt="">
+        
+    </div> -->
+    
+    
+    <!-- <div class="circle"></div> -->
+    <!-- <div class="circle-1"></div> -->
+    <!-- <div class="circle-2"></div> -->
+    <script src="/public/index.js"></script>
+    
+    <script>document.addEventListener("DOMContentLoaded", function() {
+    
+     document.getElementById("clickableText").addEventListener("click", function() {
+         
+          window.location.href = "signup";
+         
+      });
+
+
+
+
+
+});
+
+     
+  </script>
+  
+  </body>
+  </html>

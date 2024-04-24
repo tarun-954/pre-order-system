@@ -1,0 +1,207 @@
+<!-- font -->  
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        :root {--accent: #FFA500;
+--color1: linear-gradient(to bottom right, #FFA500, #FF5F1F);
+--transparent: rgb(255, 255, 255, 0.3);}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: center;
+   
+     background-image: url("https://i.pinimg.com/originals/1b/0d/79/1b0d79246c579ef24e33b742d6e3b3da.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  background-color: var(--transparent);
+  color: var(--accent);
+  position: absolute;
+  padding: 10px 30px;
+  margin-top: 130px;
+  max-height: max-content;
+  
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--transparent);
+  border-radius: 16px;
+  text-align: center;
+  align-content: center;
+  align-content: center;
+  
+}
+
+input {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  margin: 10px 0;
+  height: 40px;
+  width: auto;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  background: var(--color1);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 0;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  border-radius: 30px;
+  transition: 0.4s;
+  box-shadow: rgba(223, 218, 218, 0.1) 0px 10px 20px;
+  
+}
+
+button:hover {
+  transform: translatey(2px);
+  box-shadow: none;
+}
+
+.socials {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+::placeholder {
+            color: #341709; 
+            font-size: medium;/* Change to the color you desire */
+        }
+        .custom-link {
+    color: #4B0E00;
+  }
+  #clickableText:hover{
+    text-decoration: underline;
+
+  }
+   </style>
+    <!-- start here -->  
+    
+    <body id="body">
+
+      <form class="form" action="/signup" method="post">
+
+        {{!-- <form action="/signup" method="POST"> --}}
+
+        <h2>Sign Up</h2>
+
+        <input type="text" id="name" name="name" placeholder="Enter name" style="color:#ffffff">
+
+        <div id="nameMessage" class="message"></div>
+
+        {{!-- <input type="text" id="age" name="age" placeholder="Enter age" style="color:#ffffff"> --}}
+
+        {{!-- <div id="ageMessage" class="message"></div> --}}
+
+        <input type="email" id="email" name="email" placeholder="Enter email" style="color:#ffffff">
+
+        <div id="emailMessage" class="message"></div>
+
+        <input type="password" id="password" name="password" placeholder="Create password" style="color:#ffffff">
+
+        <div id="passwordMessage" class="message"></div>
+
+        {{!-- <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" style="color:#ffffff"> --}}
+        {{!-- <div id="confirmPasswordMessage" class="message"></div> --}}
+
+       <button type="submit" id="signIn_btn" style="cursor:pointer;" >Sign Up</button>
+
+        <p style="color:#4B0E00">Already have an account?</p>
+
+       <p id="clickableText" style="cursor: pointer; color:#4B0E00; margin-top: 1px;">Sign In</p>
+
+    
+
+      </form>
+      
+    <!-- <div class="circle"></div> -->
+    <!-- <div class="circle-1"></div> -->
+    <!-- <div class="circle-2"></div> -->
+    <script src="/public/index.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Event listener for clickable text
+    document.getElementById("clickableText").addEventListener("click", function() {
+        window.location.href = "/";
+    });
+
+    // Event listener for sign in button
+    document.getElementById("signIn_btn").addEventListener("click", function() {
+        var name = document.getElementById("name").value.trim();
+        var age = document.getElementById("age").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var password = document.getElementById("password").value.trim();
+        var confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+        // Function to display message
+        function displayMessage(id, message) {
+            document.getElementById(id).innerHTML = message;
+        }
+
+        // Clear all previous messages
+        var messageIds = ["nameMessage", "ageMessage", "emailMessage", "passwordMessage", "confirmPasswordMessage"];
+        messageIds.forEach(function(id) {
+            displayMessage(id, "");
+        });
+
+        // Validate each field and display messages
+        if (name === '') {
+            displayMessage("nameMessage", 'Please enter your name.');
+        }
+        if (age === '' || isNaN(age)) {
+            displayMessage("ageMessage", 'Please enter a valid age.');
+        }
+        if (email === '' || !isValidEmail(email)) {
+            displayMessage("emailMessage", 'Please enter a valid email address.');
+        }
+        if (password === '') {
+            displayMessage("passwordMessage", 'Please create a password.');
+        }
+        if (password !== confirmPassword) {
+            displayMessage("confirmPasswordMessage", 'Passwords do not match.');
+        }
+
+        // If no errors, display success message
+        var allMessages = messageIds.map(function(id) {
+            return document.getElementById(id).innerHTML;
+        });
+        if (!allMessages.some(message => message !== "")) {
+            displayMessage("confirmPasswordMessage", "Form submitted successfully!");
+            // You can add code here to submit the form or perform other actions
+        }
+    });
+
+    // Function to validate email format
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});
+  
+</script>
+  </body>
+  </html>

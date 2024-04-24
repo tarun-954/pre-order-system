@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders Received</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color:bisque;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .horizontal-cards-container {
+            display: flex;
+            flex-direction:inherit;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card {
+            width: max-content;
+            margin-bottom: 20px;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(109, 56, 56, 0.1);
+            align-self:left;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #000000;
+            padding: 10px;
+        }
+
+        .cart-item img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #343a40;
+        }
+
+        p {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-4" >Order Details</h1>
+    
+    <div class="horizontal-cards-container">
+        <!-- Cart Items Card -->
+        <div class="card" style="width:90%;padding:10px;">
+            <div class="card-body" id="cartItems"></div>
+        </div>
+
+        <!-- Selected Date Card -->
+        <div class="card">
+            <div class="card-body" id="selectedDate"></div>
+        </div>
+
+        <!-- Selected Time Card -->
+        <div class="card">
+            <div class="card-body" id="selectedTime"></div>
+        </div>
+
+        <!-- Packing/Dining Option Card -->
+        <div class="card">
+            <div class="card-body" id="packingDiningOption"></div>
+        </div>
+
+        <!-- Total Money Card -->
+        <div class="card">
+            <div class="card-body" id="totalMoney"></div>
+        </div>
+
+        <!-- Remaining Time Card -->
+        <div class="card" style="width:30%;">
+            <div class="card-body" id="remainingTime" style="width: max-content;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Retrieve data from sessionStorage
+    var cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+    var selectedDate = sessionStorage.getItem("selectedDate") || "";
+    var selectedTime = sessionStorage.getItem("selectedTime") || "";
+    var packingDiningOption = sessionStorage.getItem("packingDiningOption") || "";
+    var totalMoney = sessionStorage.getItem("totalMoney") || "";
+
+    // Display cart items
+    var cartItemsHtml = "<h2>Cart Items</h2>";
+    cartItems.forEach(function(item) {
+        cartItemsHtml += "<div class='cart-item'>";
+        cartItemsHtml += "<img src='" + item.imageSrc + "' />";
+        cartItemsHtml += "<div>";
+        cartItemsHtml += "<h3>" + item.itemName + "</h3>";
+        cartItemsHtml += "<p>Cuisine Type: " + item.cuisineType + "</p>";
+        cartItemsHtml += "<p>Price: " + item.priceText + "</p>";
+        cartItemsHtml += "<p>Location: " + item.location + "</p>";
+        cartItemsHtml += "<p>Opening Hours: " + item.openingHours + "</p>";
+        cartItemsHtml += "</div>";
+        cartItemsHtml += "</div>";
+    });
+    document.getElementById("cartItems").innerHTML = cartItemsHtml;
+
+    // Display other details
+    document.getElementById("selectedDate").innerHTML = "<p><b>Selected Date: <b>" + selectedDate + "</p>";
+    document.getElementById("selectedTime").innerHTML = "<p><b>Selected Time: <b>" + selectedTime + "</p>";
+    document.getElementById("packingDiningOption").innerHTML = "<p><b>Packing/Dining Option: <b>" + packingDiningOption + "</p>";
+    document.getElementById("totalMoney").innerHTML = "<p><b>Total Money: <b>" + totalMoney + "</p>";
+
+    // Update remaining time continuously
+    function updateRemainingTime() {
+        var selectedTimeParts = selectedTime.split(":");
+        var selectedHours = parseInt(selectedTimeParts[0]);
+        var selectedMinutes = parseInt(selectedTimeParts[1]);
+
+        var currentTime = new Date();
+        var currentHours = currentTime.getHours();
+        var currentMinutes = currentTime.getMinutes();
+        var currentSeconds = currentTime.getSeconds();
+
+        // Calculate remaining time
+        var remainingHours =  currentHours - selectedHours ;
+        var remainingMinutes =  currentMinutes-selectedMinutes ;
+        var remainingSeconds = 60 - currentSeconds;
+
+        if (remainingSeconds === 60) {
+            remainingSeconds = 0;
+            remainingMinutes++;
+        }
+
+        if (remainingMinutes < 0) {
+            remainingHours--;
+            remainingMinutes += 60;
+        }
+
+        if (remainingHours < 0) {
+            document.getElementById("remainingTime").innerHTML = "<p>Order Time Expired</p>";
+            alert("order time expired");
+            return;
+        }
+
+        // Format remaining time
+        var remainingTimeString = "<b>Hrs: " + remainingHours + "<br><b>Min: " + remainingMinutes + "<br><b>Sec: </b>" + remainingSeconds;
+        document.getElementById("remainingTime").innerHTML = "<p><b>Remaining Time:<br>" + remainingTimeString + "</p>";
+
+        // Update every second
+        setTimeout(updateRemainingTime, 1000);
+    }
+
+    updateRemainingTime();
+</script>
+</body>
+</html>

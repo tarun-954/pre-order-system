@@ -1,0 +1,4654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Campus Bite</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --green:#151d18;
+  --black:#2c2c54;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--green);
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+ 
+  
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--green);
+  color:#fff;
+  padding:.8rem 3rem;
+  font-size: 1.7rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background:var(--black);
+}
+
+.heading{
+  text-align: center;
+  color:var(--black);
+  text-transform: uppercase;
+  padding:1rem;
+  font-size: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.heading span{
+  color:var(--green);
+  text-transform: uppercase;
+}
+
+.header-1{
+   background-color :beige ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+}
+
+.logo{
+  color:var(--black);
+  font-weight: bolder;
+  font-size: 3rem;
+
+}
+
+.logo i{
+  padding-right: .5rem;
+  color:var(--green);
+}
+
+.header-1 .search-box-container{
+  display: flex;
+  height:5rem;
+}
+
+.header-1 .search-box-container #search-box{
+  height: 100%;
+  width:100%;
+  padding:1rem;
+  font-size: 2rem;
+  color:#333;
+  border:.1rem solid rgba(0,0,0,.3);
+  text-transform: none;
+}
+
+.header-1 .search-box-container label{
+  height: 100%;
+  width:8rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  color:#fff;
+  background:var(--green);
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-1 .search-box-container label:hover{
+  background:var(--black);
+}
+
+.header-2{
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  position: relative;
+}
+
+.header-2.active{
+  position: fixed;
+  top:0; left: 0; right:0;
+  z-index: 10000;
+}
+
+.header-2 .navbar a{
+  padding:.5rem 1.5rem;
+  font-size: 2rem;
+  border-radius: .5rem;
+  color:var(--black);
+}
+
+.header-2 .navbar a:hover{
+  background:var(--green);
+  color:#fff;
+}
+
+.header-2 .icons a{
+  font-size: 2.5rem;
+  color:var(--black);
+  padding-left: 1rem;
+}
+
+.header-2 .icons a:hover{
+  color:var(--green);
+}
+
+#menu-bar{
+  font-size: 3rem;
+  border-radius: .5rem;
+  border:.1rem solid var(--black);
+  padding:.8rem 1.5rem;
+  color:var(--black);
+
+  display: none;
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:bisque;
+}
+
+.home .image{
+  flex:1 1 40rem;
+  padding-top: 5rem;
+}
+
+.home .image img{
+  width:100%;
+}
+
+.home .content{
+  flex:1 1 40rem;
+}
+
+.home .content span{
+  font-size: 3rem;
+  color:#666;
+}
+
+.home .content h3{
+  font-size: 5rem;
+  color:var(--black);
+}
+
+.banner-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+border-radius: 0px;
+  background-color:rgb(255, 255, 255);
+  
+}
+
+.banner-container .banner{
+  flex:1                                                                                             1 40rem;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-container .banner img{
+  height: 100%;
+  width:100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.banner-container .banner .content{
+  position: absolute;
+  top:30%; left: 4%;
+  transform: translateY(-50%);
+}
+
+.banner-container .banner .content h3{
+  font-size: 3rem;
+  color:rgba(255, 255, 255, 0.883);
+ 
+}
+
+.banner-container .banner .content p{
+  font-size: 2rem;
+   color:rgba(255, 255, 255, 0.917);
+}
+
+.banner-container .banner:hover img{
+
+  transform:scale(1.9) rotate(-20deg);
+  
+  
+}
+
+.category .box-container{
+  display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+  
+}
+
+.category .box-container .box{
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  text-align: center;
+  padding:2rem;
+  flex:1 1 25rem;
+  
+}
+
+.category .box-container .box img{
+  width: 20rem;
+  margin:.5rem 0;
+  
+}
+
+.category .box-container .box h3{
+  font-size: 3.5rem;
+  color:var(--black);
+  
+}
+
+.category .box-container .box p{
+  font-size: 2rem;
+  color:#666;
+  padding:.5rem 0;
+
+}
+
+.category .box-container .box .btn{
+  display: block;
+}
+
+.product .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.product .box-container .box{
+  flex:1 1 30rem;
+  text-align: center;
+  padding:2rem;
+  border:.1rem solid rgba(251, 248, 248, 0.3);
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid black;
+}
+
+.product .box-container .box img{
+  height: 10rem;
+}
+
+.product .box-container .box .discount{
+  position: absolute;
+  top:1rem; left: 1rem;
+  background:rgba(18, 189, 18, 0.1);
+  color:var(--green);
+  padding:.7rem 1rem;
+  font-size: 2rem;
+}
+
+.product .box-container .box .icons{
+  position: absolute;
+  top:.5rem; right:-6rem;
+}
+
+.product .box-container .box:hover .icons{
+  right:1rem;
+}
+
+.product .box-container .box .icons a{
+  display: block;
+  height:4.5rem;
+  width:4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  color:var(--black);
+  background:rgba(0,0,0,.05);
+  border-radius: 50%;
+  margin-top: .7rem;
+}
+
+.product .box-container .box .icons a:hover{
+  background:var(--green);
+  color:#fff;
+}
+
+.product .box-container .box h3{
+  color:var(--black);
+  font-size: 2.5rem;
+}
+
+.product .box-container .box .stars i{
+  padding:1rem .1rem;
+  font-size: 1.7rem;
+  color:gold;
+ 
+}
+
+.product .box-container .box .price{
+  font-size: 2rem;
+  color:#333;
+  padding:.5rem 0;
+}
+
+.product .box-container .box .price span{
+  font-size: 1.5rem;
+  color:#999;
+  text-decoration: line-through;
+}
+
+.product .box-container .box .quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.product .box-container .box .quantity span{
+  padding:0 .7rem;
+  font-size: 1.7rem;
+}
+
+.product .box-container .box .quantity input{
+  border:.1rem solid rgba(0,0,0,.3);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color:var(--black);
+  padding:.5rem;
+  background:rgba(0,0,0,.05);
+}
+
+.product .box-container .box .btn{
+  display: block;
+}
+
+.deal{
+  background:url(../images/deal-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.deal .content{
+  max-width: 50rem;
+}
+
+.deal .content .title{
+  font-size: 4rem;
+  color:var(--black);
+}
+
+.deal .content p{
+  font-size: 1.7rem;
+  padding:1rem 0;
+  color:#ffffff;
+}
+
+.deal .content .count-down{
+  display: flex;
+  gap:1rem;
+  padding:.5rem 0;
+}
+
+.deal .content .count-down .box{
+  width:9rem;
+  text-align: center;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border:.1rem solid rgba(0,0,0,.3);
+}
+
+.deal .content .count-down .box h3{
+  color:var(--black);
+  background:#fff;
+  height: 7rem;
+  line-height: 7rem;
+  width:100%;
+  font-size: 5rem;
+}
+
+.deal .content .count-down .box span{
+  display: block;
+  background:var(--black);
+  color:#fff;
+  width:100%;
+  padding:.5rem;
+  font-size: 2rem;
+}
+
+.contact form{
+  text-align: center;
+  padding:2rem;
+  border:.1rem solid rgba(0,0,0,.3);
+}
+
+.contact form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .inputBox input, .contact form textarea{
+  padding:1rem;
+  font-size: 1.7rem;
+  background:#f7f7f7;
+  text-transform: none;
+  margin:1rem 0;
+  border:.1rem solid rgba(0,0,0,.3);
+  width: 49%;
+}
+
+.contact form textarea{
+  height: 20rem;
+  resize: none;
+  width: 100%;
+}
+
+.newsletter{
+  background:url(../images/newsletter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding:5rem 2rem;
+}
+
+.newsletter h3{
+  font-size: 3rem;
+  color:var(--black);
+}
+
+.newsletter form{
+  max-width: 55rem;
+  display: flex;
+  align-items: center;
+  margin:1rem auto;
+  padding:1.5rem;
+  background:rgba(0,0,0,.1);
+}
+
+.newsletter form .box{
+  width:100%;
+  padding:.7rem 1.5rem;
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+}
+
+.newsletter form .btn{
+  margin-top: 0;
+}
+
+.footer .box-container{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+  padding:1rem 0;
+  flex:1 1 25rem;
+}
+
+.footer .box-container .box .share a{
+  padding:0;
+  height:4rem;
+  width:4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+.footer .box-container .box p{
+  font-size: 1.3rem;
+  color:#666;
+  padding:.7rem 0;
+}
+
+.footer .box-container .box .links{
+  padding:1rem 0;
+}
+
+.footer .box-container .box .links a{
+  display: block;
+  padding:.5rem 0;
+  font-size: 1.7rem;
+  color:#333;
+}
+
+.footer .box-container .box .links a:hover{
+  text-decoration: underline;
+  color:var(--green);
+}
+
+.footer .credit{
+  padding:2.5rem 1rem;
+  border-top: .1rem solid rgba(0,0,0,.1);
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer .credit span{
+  color:var(--green);
+}
+
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/bac203052382824f8c8fcd7668417f771597997180.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/9dd3d8fd6150ab3f8106f4a073d054521597921546.ttf) format('truetype');
+  font-style:normal;
+  font-weight:100;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/0256637bc22e4c9e069ad868c196d29f1597997099.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/0a2cb1a22221afd4a5c4f59bde89afda1597921603.ttf) format('truetype');
+  font-style:normal;
+  font-weight:200;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/081152f7adf53200c7f8789005ca54ca1597997115.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/6651f01000a2e122e587bb2282cb3ea21597921594.ttf) format('truetype');
+  font-style:normal;
+  font-weight:300;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/c750382e5207a1a41cdcb496ef2326d51597997149.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/aead83936ff20e860667e0a18f26d7571597921574.ttf) format('truetype');
+  font-style:normal;
+  font-weight:400;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/b27921d5a95f787012c8e9dfbb86c2751597997132.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/1674f573eef1f8ba15be69b44aab4d401597921585.ttf) format('truetype');
+  font-style:normal;
+  font-weight:500;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/8e7505f4e7be967217d81781b49425bc1597997165.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/df06bf5a1ce831e889b3b07f3bab84d61597921557.ttf) format('truetype');
+  font-style:normal;
+  font-weight:600;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/1792d65b5545ef5781d92cf519ad47c21597997060.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/def01ba19fdf2476f0fc1904e4195e011597921623.ttf) format('truetype');
+  font-style:normal;
+  font-weight:700;
+} 
+@font-face { 
+  font-family:Okra;
+  font-display:swap;
+  src:url(https://b.zmtcdn.com/web_assets/c596984d29a9ca0a7995ac6f4d9ac6461597997080.woff2) format('woff2'), url(https://b.zmtcdn.com/web_assets/e791ade4b99ef84be3ac11a07f2a774c1597921614.ttf) format('truetype');
+  font-style:normal;
+  font-weight:800;
+} 
+  body {  
+    font-size:1.6rem;
+    font-weight:300;
+    font-family:Okra, Helvetica, sans-serif;
+  }  
+* { 
+    box-sizing: inherit; 
+    -webkit-tap-highlight-color: transparent;
+} 
+
+div { 
+    font-size: 1.6rem;
+} 
+
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 62.5%; 
+    font-weight: 300; 
+    box-sizing: border-box;
+} 
+
+body { 
+    font-family: Okra, Helvetica, sans-serif;
+} 
+
+html { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 62.5%; 
+    font-weight: 300; 
+    box-sizing: border-box;
+} 
+
+.gieYfx { 
+    border-radius: 1.5rem; 
+    border: 0.1rem solid rgb(232, 232, 232); 
+    padding-bottom: 0.4rem;
+    background-color: black;
+    width: 300px;
+} 
+
+@media (min-width: 481px){ 
+  .gieYfx { 
+    border-color: rgb(255, 255, 255); 
+    padding: 1rem;
+  } 
+}     
+
+*,:after,:before { 
+    box-sizing: inherit; 
+    -webkit-tap-highlight-color: transparent;
+} 
+
+@media (min-width: 481px){ 
+  .gieYfx:hover { 
+    border-color: rgb(232, 232, 232); 
+    box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem; 
+    box-sizing: border-box;
+  } 
+}     
+
+.gjRRBQ { 
+    display: block; 
+    position: relative; 
+    
+} 
+
+.dIvKTC { 
+    display: block; 
+    text-decoration: none; 
+    
+} 
+
+.imkBnP { 
+    position: absolute; 
+    top: 1rem; 
+    left: 1.1rem; 
+    width: max-content; 
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(0.4rem); 
+    border-radius: 0.2rem; 
+    padding: 0px 0.5rem; 
+    z-index: 1;
+} 
+
+.jtuXep { 
+    position: relative; 
+    max-width: 100%; 
+    width: 100%; 
+    height: 24.8rem; 
+    overflow: hidden;
+} 
+
+.kdQuYz { 
+    border-radius: 1.5rem 1.5rem 0px 0px; 
+    flex-shrink: 0; 
+    
+} 
+
+@media (min-width: 481px){ 
+  .kdQuYz { 
+    border-radius: 1.5rem;
+  } 
+}     
+
+.kbFtfh { 
+    position: absolute; 
+    bottom: 1.2rem; 
+    max-width: calc(100% - 2.4rem);
+} 
+
+.lbumXf { 
+    display: flex; 
+    -webkit-box-pack: justify; 
+    justify-content: space-between; 
+    font-size: 1.4rem; 
+    line-height: 1.7rem;
+} 
+
+.joISYm { 
+    display: flex; 
+    position: relative; 
+    gap: 10px;
+} 
+
+.eBJXHZ { 
+    height: 0.1rem; 
+    background-color: rgb(232, 232, 232); 
+    margin-bottom: 0.5rem; 
+    margin-top: 1rem;
+} 
+
+.kjMjbM { 
+    display: flex; 
+    -webkit-box-pack: justify; 
+    justify-content: space-between; 
+    width: 100%; 
+    border-top: 1px solid rgb(248, 248, 248);
+} 
+
+@media (min-width: 481px){ 
+  .kjMjbM { 
+    border-top: 0px;
+  } 
+}     
+
+.gORZjV { 
+    font-weight: normal; 
+    font-size: 0.9rem; 
+    line-height: 1.2rem; 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    text-align: right; 
+    color: rgb(255, 255, 255); 
+    opacity: 0.5;
+} 
+
+.cVOEqG { 
+    width: 100%; 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    height: 100%; 
+    background: linear-gradient(to right, rgb(248, 248, 248) 0%, rgb(255, 255, 255) 10%, rgb(248, 248, 248) 40%, rgb(248, 248, 248) 100%) no-repeat rgb(248, 248, 248); 
+    opacity: 0; 
+    transition: opacity 0.25s ease-out 0s; 
+    will-change: opacity; 
+    border-radius: inherit; 
+    animation: 1.5s linear 0s infinite normal forwards running jCOzbu;
+} 
+
+.fyZwWD { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transform: none; 
+    opacity: 1; 
+    will-change: transform, opacity; 
+    border-radius: inherit; 
+    filter: unset; 
+    transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+} 
+
+.egbtKz { 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    gap: 10px; 
+    background: linear-gradient(90deg, rgb(12, 14, 17) 0%, rgb(12, 14, 17) 25%, rgb(12, 14, 17) 50%, rgba(12, 14, 17, 0.8) 80%, rgba(12, 14, 17, 0) 100%); 
+    padding: 2px 50px 2px 14px; 
+    font-weight: 500; 
+    line-height: 24px;
+} 
+
+.dFwWJC { 
+    line-height: 1.2; 
+    margin-block-end: 0px; 
+    font-weight: 500; 
+    text-align: left; 
+    font-size: 1.7rem; 
+    margin: 0.8rem 0px 0.6rem; 
+    max-width: 80%; 
+    color: rgb(255, 253, 253); 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+} 
+
+.hoBwpb { 
+    max-width: 20%; 
+    display: flex; 
+    align-content: center; 
+    text-align: center; 
+    -webkit-box-align: center; 
+    align-items: center;
+} 
+
+p { 
+    font-size: 1.6rem;
+} 
+
+.fDjWNG { 
+    font-size: inherit; 
+    line-height: 1.5; 
+    margin: 0px; 
+    text-align: left; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    color: rgb(249, 243, 243); 
+    max-width: 56%; 
+    padding: 0px 0px 0.4rem;
+} 
+
+.dHtbEm { 
+    font-size: inherit; 
+    line-height: 1.5; 
+    margin: 0px; 
+    text-align: right; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    color: rgb(245, 241, 241); 
+    max-width: 30%; 
+    padding: 0px 0px 0.4rem;
+} 
+
+.joISYm .min-basic-info-left  { 
+    flex: 1 1 0%; 
+    overflow: hidden;
+} 
+
+.joISYm .min-basic-info-right  { 
+    display: flex; 
+    -webkit-box-align: end; 
+    align-items:center;
+    align-content: center;
+    
+} 
+
+.hZfBsz { 
+    width: 100%; 
+    overflow: hidden;
+} 
+
+.egbtKz .gold-icn  { 
+    width: 18px;
+} 
+
+.egbtKz .gold-offer-value  { 
+    font-size: 14px; 
+    color: rgb(222, 145, 10); 
+    background: linear-gradient(135deg, rgb(140, 97, 21) -85.92%, rgb(151, 109, 35) -56.81%, rgb(181, 142, 72) -27.7%, rgb(229, 195, 132) 1.41%, rgb(233, 199, 137) 30.52%, rgb(255, 234, 196) 59.63%, rgb(230, 185, 102) 88.75%, rgb(153, 111, 37) 117.86%) text; 
+    -webkit-text-fill-color: transparent; 
+    max-width: max-content;
+} 
+
+.kHxpSk { 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    font-size: inherit; 
+    cursor: unset;
+} 
+
+.cOAsXn { 
+    margin: 0px; 
+    text-align: left; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    color: rgb(249, 244, 244); 
+    max-width: 100%; 
+    padding: 0px 0px 0.4rem; 
+    font-size: 1.4rem; 
+    line-height: 1.7rem;
+} 
+
+.iosCRN { 
+    margin: 0px; 
+    text-align: left; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    color: rgb(252, 244, 245); 
+    padding: 0px 0px 0.4rem; 
+    font-size: 1.4rem; 
+    line-height: 1.7rem;
+} 
+
+span { 
+    font-size: 1.6rem;
+} 
+
+.icSDln { 
+    font-size: 1.4rem; 
+    font-weight: 400; 
+    color: rgb(77, 13, 205);
+} 
+
+.joISYm .min-basic-info-right p  { 
+    margin: 0px; 
+    background: rgba(248, 4, 4, 0.8); 
+    backdrop-filter: blur(0.4rem); 
+    border-radius: 0.4rem; 
+    font-weight: 500; 
+    font-size: 1.2rem; 
+    line-height: 1.6rem; 
+    color: rgb(249, 242, 242); 
+    padding: 0.2rem 0.5rem 0.3rem;
+} 
+
+.dBeVfZ { 
+    display: flex; 
+    width: 100%;
+} 
+
+.kgIEjH { 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    -webkit-box-pack: center; 
+    justify-content: center; 
+    background-color: rgb(36, 150, 63); 
+    color: rgb(255, 255, 255); 
+    height: 2rem; 
+    min-width: 2.6rem; 
+    padding: 0px 0.4rem; 
+    font-size: 1.3rem; 
+    border-radius: 0.6rem; 
+    border: 1px solid rgb(36, 150, 63);
+} 
+
+.fVAswG { 
+    display: flex; 
+    width: 100%; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    height: 3.4rem;
+} 
+
+.liCXOR { 
+    display: block; 
+    font-size: inherit;
+} 
+
+.gzrZiI { 
+    position: relative; 
+    max-width: 100%; 
+    width: 4.8rem; 
+    height: 1.8rem; 
+    overflow: hidden;
+} 
+
+.hGoOyu { 
+    flex-shrink: 0; 
+    height: 1.8rem;
+} 
+
+.gQBtHL { 
+    margin: 0px 0px 0px 1rem; 
+    text-align: left; 
+    color: rgb(255, 241, 241); 
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    font-weight: 400; 
+    font-size: 1.2rem; 
+    line-height: 1.7rem;
+} 
+
+.cILgox { 
+    margin-right: 0.2rem; 
+    font-weight: 600; 
+    font-size: inherit; 
+    padding-bottom: 0.1rem;
+} 
+
+.pxJGx { 
+    margin-left: 0px;
+} 
+
+.iFnyeo { 
+    display: flex; 
+    -webkit-box-align: center; 
+    align-items: center; 
+    cursor: inherit;
+} 
+
+.fauQLv { 
+    display: inline-block; 
+    vertical-align: middle; 
+    line-height: 1;
+} 
+
+
+@keyframes jCOzbu { 
+  0% {  
+      background-position: -80vw 0px; 
+      background-position-x: -80vw; 
+      background-position-y: 0px; 
+  }  
+  100% {  
+      background-position: 80vw 0px; 
+      background-position-x: 80vw; 
+      background-position-y: 0px; 
+  }  
+
+} 
+
+
+
+
+
+/* media queries  */
+
+@media(max-width:1200px){
+
+  html{
+    font-size: 55%;
+  }
+
+}
+
+@media(max-width:991px){
+
+  .header-1,
+  .header-2{
+    padding:2rem;
+  }
+
+  section{
+    {{!-- padding:2rem; --}}
+  }
+
+}
+
+@media(max-width:768px){
+
+  #menu-bar{
+    display: initial;
+  }
+
+  .header-2 .navbar{
+    position: absolute;
+    top:100%; left: 0; right:0;
+    background:var(--black);
+    padding:1rem 2rem;
+    display: none;
+  }
+
+  .header-2 .navbar.active{
+    display: initial;
+  }
+
+  .header-2 .navbar a{
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    background:#fff;
+    padding:1rem;
+    margin:1.5rem 0;
+  }
+
+  .home .content{
+    text-align: center;
+  }
+
+  .home .content h3{
+    font-size: 4rem;
+  }
+
+  .deal{
+    background-position: left;
+  }
+
+  .deal .content{
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .deal .content .count-down{
+    justify-content: center;
+  }
+
+  .contact form .inputBox input{
+    width:100%;
+  }
+
+  .newsletter h3{
+    font-size: 2.2rem;
+  }
+
+}
+
+@media(max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .heading{
+    font-size: 3rem;
+  }
+
+  .header-1{
+    flex-flow: column;
+  }
+
+  .header-1 .search-box-container{
+    width:100%;
+    margin-top: 2rem;
+  }
+
+  .logo{
+    font-size: 4rem;
+  }
+
+  .deal .content .count-down .box h3{
+    font-size: 4rem;
+  }
+
+  .deal .content .count-down .box span{
+    font-size: 1.5rem;
+  }
+
+}
+
+{{!-- css for making cart  --}}
+/* Add styles for the body when the cart is open */
+/* Add styles for the body when the cart is open */
+.cart-open {
+    overflow: hidden;
+}
+
+.cart {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%; /* Set maximum width */
+    width: auto; /* Default width */
+    height: 500px; /* Set height to auto for responsiveness */
+    position: relative;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: bisque;
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+}
+.cart-item {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.cart-item img {
+    width: 100px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.item-details {
+    flex: 1; /* Allow the details to occupy remaining space */
+}
+
+.item-details h3 {
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.item-details p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size as needed */
+    line-height: 1.5; /* Adjust line height as needed */
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .cart {
+        top: 50%; /* Adjust top position for smaller screens */
+        left: 50%; /* Adjust left position for smaller screens */
+        transform: translate(-50%, -50%);
+    }
+
+    .cart-container {
+       
+    max-width: max-content;
+    padding: 10px;
+    max-height: 80vh;
+    overflow: auto; 
+}
+
+
+    .close-cart {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .cart-item img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: flex-end; /* Align elements data to the flex end */
+        justify-content: space-between;
+       
+    }
+}
+
+
+{{!-- css for the button in the cart and total money section --}}
+.total-money {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.total-money p {
+    font-size: 16px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.total-money .total-amount {
+    font-weight: bold; /* Make the total amount bold */
+}
+
+.checkout-button {
+    background-color: #4CAF50;
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 2px; 
+    
+}
+.align-button{
+  {{!-- border-right: 1px solid #ccc; --}}
+  {{!-- border-left: 1px solid #ccc; --}}
+  margin-left: 2dvh;
+}
+.checkout-button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+.total {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20px;
+  
+    
+   
+   margin-bottom: 10px;
+    padding-top: 10px;
+      margin-left: 2dvh;
+    
+}
+{{!-- button css checkout  --}}
+/* Apply hover effect to the button */
+.button:hover {
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+}
+
+/* css code for date time pickup*/
+.container-fluid {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .card {
+        box-shadow: 0px 4px 8px 0px #28292c;
+    }
+
+    input {
+        padding: 10px 20px !important;
+        border: 1px solid #000 !important;
+       
+        box-sizing: border-box;
+        
+        color: #000000 !important;
+        font-size: 16px;
+        letter-spacing: 1px;
+        width: 180px;
+    }
+
+    input:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #512DA8;
+        outline-width: 0;
+    }
+
+    ::placeholder {
+        color: #000000;
+        opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+        color: #000000;
+    }
+
+    ::-ms-input-placeholder {
+        color: #0a0909;
+    }
+
+    button:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0;
+    }
+
+    .datepicker {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: none;
+        padding: 10px !important;
+    }
+
+    .datepicker-dropdown:after {
+        border-bottom: 6px solid #000;
+    }
+
+    thead tr:nth-child(3) th {
+        color: #271010 !important;
+        font-weight: bold;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .dow, .old-day, .day, .new-day {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 0px !important;
+    }
+
+    .old-day:hover, .day:hover, .new-day:hover, .month:hover, .year:hover, .decade:hover, .century:hover {
+        border-radius: 6px !important;
+        background-color: #000000;
+        color: #000;
+    }
+
+    .active {
+        border-radius: 6px !important;
+        
+        color: #000 !important;
+    }
+
+    .disabled {
+        color: #616161 !important;
+    }
+
+    .prev, .next, .datepicker-switch {
+        border-radius: 0 !important;
+        padding: 20px 10px !important;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #000000 !important;
+        opacity: 0.8;
+    }
+
+    .prev:hover, .next:hover, .datepicker-switch:hover {
+        background-color: inherit !important;
+        opacity: 1;
+    }
+
+    .cell {
+        border: 1px solid #BDBDBD;
+        margin: 2px;
+        cursor: pointer;
+    }
+
+    .cell:hover {
+        border: 1px solid #3D5AFE;
+    }
+
+    .cell.select {
+        background-color: #3D5AFE;
+        color: #fff;
+    }
+
+    .fa-calendar {
+        color: #ffffff;
+        font-size: 30px;
+        padding-top: 8px;
+        padding-left: 5px;
+        cursor: pointer;
+    }
+     #selectedDateTime {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+   #selected-date{
+margin-bottom: 0.3em;
+padding: 0.3em;
+border:0.06em solid black;
+
+   }
+   #selected-time{
+margin-bottom: 1em;
+padding: 0.3em;
+border:0.06em solid black;
+
+
+   }
+ #carouselExampleIndicators .carousel-inner {
+        height: 400px; /* Adjust the height as needed */
+    }
+
+    #carouselExampleIndicators .carousel-item img {
+        height: 400px; /* Adjust the height of the images as needed */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+
+    .clicked {
+        color: #ff0000; /* Set the color to red */
+    }
+</style>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <div class="header-1">
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>Quick Campus Bite</a>
+
+        <form action="" class="search-box-container">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </div>
+
+    <div class="header-2">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#category">Kitchen Atte</a>
+            <a href="#category1">Oven Express</a>
+            <a href="#deal">deal</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            
+          <a href="#" class="fas fa-heart" id="heartIcon"></a>
+
+            <a href="#" class="fas fa-user-circle"></a>
+        </div>
+
+    </div>
+<div class="cart">
+        <div class="cart-container">
+            <h2>Shopping Cart</h2>
+           
+            <div class="cart-items"></div>
+          
+
+            {{!-- here starts the  date time picker code using bootstrap  --}}
+
+ 
+
+<div class="container-fluid px-0 px-sm-4 mx-auto">
+  <div class="row justify-content-center mx-0">
+    <div class="col-lg-10">
+      <div class="card border-0">
+        <form autocomplete="off">
+          <div class="card-header bg-dark">
+            <div class="mx-0 mb-0 row justify-content-sm-center justify-content-start px-1">
+              <input type="text" id="dp1" class="datepicker" placeholder="Pick Date" name="date" readonly><span class="fa fa-calendar"></span>
+            </div>
+          </div>
+          <div class="card-body p-3 p-sm-5">
+            <div class="row text-center mx-0">
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">9:00AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">9:30AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">9:45AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">10:00AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">10:30AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">10:45AM</div></div>
+            </div>
+            <div class="row text-center mx-0">
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">11:00AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">11:30AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">11:45AM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">12:00PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">12:30PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">12:45PM</div></div>
+            </div>
+            <div class="row text-center mx-0">
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">1:00PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">1:30PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">1:45PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">2:00PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">2:30PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">2:45PM</div></div>
+            </div>
+            <div class="row text-center mx-0">
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">3:00PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">3:30PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">4:15PM</div></div>
+              <div class="col-md-2 col-4 my-1 px-2"><div class="cell py-1">5:00PM</div></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{{!-- time pick up code end here --}}
+
+{{!-- sected time date print  --}}
+
+<div id="selected-date">Selected Date:</div>
+<div id="selected-time">Selected Time:</div>
+
+{{!-- selected time date end --}}
+
+{{!-- packing using bootstrap or dine --}}
+<div class="card" style="max-width: 400px;">
+    <div class="card-body">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" style="margin-left: 20px;" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          <i class="fas fa-box-open" ></i> Packing
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" style="margin-left: 20px;">
+        <label class="form-check-label" for="exampleRadios2">
+          <i class="fas fa-utensils"></i> Dining
+        </label>
+      </div>
+    </div>
+  </div>
+{{!-- total money  --}}
+  <div class="total">
+                Total: ₹<span class="total-price">0</span>
+            </div>
+{{!-- total money end  --}}
+
+{{!-- checkout button end --}}
+            <div class="align-button">
+            <button class="checkout-button">Proceed to Checkout</button>
+
+            {{!-- checkout button --}}
+            </div>
+            <button class="close-cart">Close</button>
+        </div>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="image">
+        <img src="https://i.postimg.cc/J73hqGL4/inaba-yui-girl-brunette-food-fun-714857-removebg-preview.png" alt="" style="height: 500px; width:500px">  
+       
+    </div>  
+
+    <div class="content">
+        <span>Quick Campus Bite</span>
+        <h3>Lunch break? Order Now</h3>
+        <a href="/" class="btn">get started</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- banner section starts  -->
+
+<section class="banner-container">
+
+    <div class="banner">
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2021/01/tasty-butter-chicken-curry-dish-from-indian-cuisine-1277362334.jpg" alt="">
+        <div class="content">
+            <h3>Kitchen Atte </h3>
+            <p>Dine and Packing available</p>
+              <p>Near Appartments Food court</p>
+            <a href="#category" class="btn">Order now</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="https://images.pexels.com/photos/1026679/pexels-photo-1026679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <div class="content">
+            <h3>Oven Express</h3>
+            <p>Dine and Packing available</p>
+            <p>Near Appartments Food court</p>
+            <a href="#category1" class="btn">Order now</a>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <img src="https://www.wallpapertip.com/wmimgs/54-549498_high-resolution-wallpaper-food.jpg" alt="">
+        <div class="content">
+            <h3>Smart Point </h3>
+            <p>Dine and Packing available</p>
+              <p>Near Appartments Food court</p>
+            <a href="#" class="btn">Order now</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- banner section ends -->
+
+<!-- category section starts  -->
+
+<section class="category" id="category" style="background-color:bisque">
+
+    <h1 class="heading">Order from <span>Kitchen Atte</span></h1>
+
+    <div class="box-container">
+{{!-- here starts the food cards --}}
+<div class="gieYfx">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+     
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://tse3.mm.bing.net/th?id=OIP.Jf1SvhMhdXh1UnJyLkknRwHaFJ&pid=Api&P=0&h=180" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+       Aloo paratha (VEG)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+               3.9
+            <div class="liCXOR">
+
+              <div class="kHxpS">
+                              
+                <div class="cILgox">
+               
+                </div>
+              
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        Northern, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹30
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          near apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+      <div class="min-basic-info-right">
+  <div class="button" style="cursor: pointer;" onclick="placeOrder()" type="button">
+    <p>Add to cart</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a safe packging and dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+        <!-- {{!//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// }} -->
+   <div class="gieYfx">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://www.bitesbee.com/wp-content/uploads/2021/09/Cheese-Tomato-Kadhi-Aloo-Gobhi-with-Raita-Jeera-Rice-_-Butter-Roti.jpg" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        COMBO (Veg.pulao+Panner Gravy,Dal+Rice)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Northern
+      </p>
+      <p class="dHtbEm">
+        ₹90 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartment, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuRpH8h5fKjQ4CAvp-AvrC1JE8X6Gy2l5ckWX3CmoGcw&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        THALI (Special Thali)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  3.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        Northern
+      </p>
+      <p class="dHtbEm">
+        ₹100 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgukOcWb2S-uSnHETwUtePf4wWqZ5p7K4krA&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        NORMAL THALI(Veg)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.0
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+       Northern
+      </p>
+      <p class="dHtbEm">
+        ₹60 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxD6f-BvL_O-xKbc05fr3kWoMRWWalbntWAw&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        MANCHURIAN/ FRIED RICE
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Italian, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹80 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkIDlPipwnNHS-aM52o3MjZfHGRU_X6AgERA&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Masala Dosa
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        South Indian
+      </p>
+      <p class="dHtbEm">
+        ₹70 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+         Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="data:image/jpeg;base64,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" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            10% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Noodles
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.1
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Italian, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹60 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7cHZguBr-Q5alF947N8au1CYMhzaMOBMAag&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        MOMOS
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  3.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        Italian, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹60 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="gieYfx ">
+  <a class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUOwj-9B9lOBTsPvHVFusqiAhHrvIlSB1dHg&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            60% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        PIZZA
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.4
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Italian, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹150 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://static.toiimg.com/thumb/83533503.cms?imgsize=174362&width=800&height=800" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        MONGO SHAKE
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG" style="color:white">
+         Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹40 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="data:image/jpeg;base64,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" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        OREO SHAKE
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹40 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Aparments, LPU 
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9pam
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="data:image/jpeg;base64,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" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        ICE CREAM
+      </h4>
+      <div class="hoBwpb">
+        <div class=" kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class=" kHxpSk">
+                <div class="cILgox">
+                  4.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lbumXf">
+      <p class="sc-LAuEU fDjWNG">
+        Desserts
+      </p>
+      <p class="sc-LAuEU dHtbEm">
+        ₹80 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="sc-gkfylT cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="sc-ljUfdc iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+</section>
+
+
+
+
+<section class="banner-container">
+
+   
+
+    <div class="banner">
+        <img src="https://www.wallpapertip.com/wmimgs/54-549498_high-resolution-wallpaper-food.jpg" alt="">
+        <div class="content">
+            <h3>Smart Point </h3>
+            <p>Dine and Packing available</p>
+              <p>Near Appartments Food court</p>
+            <a href="#" class="btn">Order now</a>
+        </div>
+    </div>
+
+</section>
+<!-- category section ends -->
+
+<!-- Oven Express section starts  -->
+<section class="category" id="category1" style="background-color:bisque">
+
+    <h1 class="heading">Order from <span>Oven Express</span></h1>
+
+    <div class="box-container">
+{{!-- here starts the food cards --}}
+<div class="gieYfx">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+     
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/4163959fb6770b3777b5f09b27cf564f" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            10% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+      Chinese platter (VEG)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+               5.0
+            <div class="liCXOR">
+
+              <div class="kHxpS">
+                              
+                <div class="cILgox">
+               
+                </div>
+              
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Fast Food
+      </p>
+      <p class="dHtbEm">
+        ₹99 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+      <div class="min-basic-info-right">
+  <div class="button" style="cursor: pointer;" onclick="placeOrder()" type="button">
+    <p>Add to cart</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a safe packging and dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+        <!-- {{!//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// }} -->
+   <div class="gieYfx">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://www.thespicecollective.co/cdn/shop/articles/20220214182237-pav-20bhaji-20-20adobestock_547x.jpg?v=1644862961" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Pav Bhaji
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Northern
+      </p>
+      <p class="dHtbEm">
+        ₹60 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7JGXaUuNmgiqXGIY247esglIPOR9Q4OhOg&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            10% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Vada Pav
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        Northern
+      </p>
+      <p class="dHtbEm">
+        ₹40
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldv Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSADNZ_hntBW1f42Uwb1anQ0yc1G7HpCDgq2w&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            30% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Pasta
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.0
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+       Italian
+      </p>
+      <p class="dHtbEm">
+        ₹70 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjRXALcXchXG0TACn_xRTL3rcn-BO0j8i_sie_63NhFKY5oNfW6UVJOjTReZOCEhEyELc&usqp=CAU"alt="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            10% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Schezwan Rice
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Italian, Fast Food
+      </p>
+      <p class="dHtbEm">
+        ₹80 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Apartments, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://static.toiimg.com/photo/62194857.cms" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Panner Wrap (VEG)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.9
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        Northern
+      </p>
+      <p class="dHtbEm">
+        ₹90 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+         Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://i.pinimg.com/736x/83/d0/15/83d0154ccd4f79b37e74bfcc3241aa7b.jpg" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            10% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Honey Chilli (VEG)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Italian, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹60 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi-XQDp1y2z63gLQjqeNubMzTHwggzZTyhVw&s" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Naan (Dahi+Chana)
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.0
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+        Northern
+      </p>
+      <p class="dHtbEm">
+        ₹50 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="gieYfx ">
+  <a class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://www.tastekatadka.com/wp-content/uploads/2015/02/PUNJABI-CHOLE-BHATURE-RECIPE.jpg" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            40% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Chole Bhature
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.4
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Italian, Fast Food, Desserts, Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹80
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/mojito-cocktails-150961e.jpg?quality=90&resize=430,390" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Mojito 
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  5.0
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG" style="color:white">
+         Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹40 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://img.freepik.com/free-photo/fresh-coffee-steams-wooden-table-close-up-generative-ai_188544-8923.jpg" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Coffee
+      </h4>
+      <div class="hoBwpb">
+        <div class="kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class="kHxpSk">
+                <div class="cILgox">
+                  4.5
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lbumXf">
+      <p class="fDjWNG">
+         Beverages
+      </p>
+      <p class="dHtbEm">
+        ₹30
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU 
+        </p>
+        <p color="#ab000d" class="iosCRN">
+          Opens at 9pam
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="gieYfx ">
+  <a  class="gjRRBQ">
+    <div class="imkBnP">
+      <div class="gORZjV">
+        Promoted
+      </div>
+    </div>
+    <div height="24.8rem" width="100%" class="jtuXep kdQuYz">
+      <div src="" class="cVOEqG">
+      </div>
+      <img alt="Restaurant Card" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf4xmMD9Yh-LaU7rf0Xv99U_X3T22eGvYUpvzGlOCm8uYfx6mpeKwcjHo622STNkBnV_k&usqp=CAU" loading="lazy" class="fyZwWD">
+    </div>
+    <div class="kbFtfh">
+      <div class="egbtKz">
+        <img src="https://b.zmtcdn.com/data/o2_assets/9b1ff9e19b7fadea6c6a57e081a1f5ac1687776279.png" alt="Zomato Gold" class="gold-icn">
+        <div class="gold-offer-value">
+          Flat 
+          <b>
+            50% OFF
+          </b>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a  class="dIvKTC">
+    <div class="lbumXf">
+      <h4 class="dFwWJC">
+        Chocolate brownie(vanilla ice cream nuts) 
+      </h4>
+      <div class="hoBwpb">
+        <div class=" kHxpSk">
+          <div color="#24963F" height="2rem" width="2.6rem" font-size="1.3rem" class="kgIEjH">
+            <div class="liCXOR">
+              <div class=" kHxpSk">
+                <div class="cILgox">
+                  5.0
+                </div>
+                <div class="pxJGx">
+                  <i class="iFnyeo" color="#FFFFFF">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="0.8rem" height="0.8rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 fauQLv">
+                      <title>
+                        star-fill
+                      </title>
+                      <path d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                      </path>
+                    </svg>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="lbumXf">
+      <p class="sc-LAuEU fDjWNG">
+        Desserts
+      </p>
+      <p class="sc-LAuEU dHtbEm">
+        ₹60 
+      </p>
+    </div>
+    <div class="joISYm">
+      <div class="min-basic-info-left">
+        <p class="sc-gkfylT cOAsXn">
+          Near Baldev Raj Mittal Auditorium, LPU
+        </p>
+        <p color="#ab000d" class="sc-ljUfdc iosCRN">
+          Opens at 9am
+        </p>
+        <span class="icSDln">
+        </span>
+      </div>
+      <div class="min-basic-info-right">
+       <div class="button" style="cursor: pointer;" type="button">
+  <p>Add to cart</p>
+</div>
+      </div>
+    </div>
+    <div class="eBJXHZ">
+    </div>
+    <div class="kjMjbM">
+      <div class="hZfBsz">
+        <div width="100%" list="[object Object]" size="1.8" class="dBeVfZ">
+          <div class="fVAswG">
+            <div height="1.8rem" width="4.8rem" class="gzrZiI hGoOyu">
+              <div src="" class="cVOEqG">
+              </div>
+              <img alt="image" src="https://b.zmtcdn.com/MaxSafety/DiningBadge/a9e3f60f5ed05ff69a6bfa5eb87b442e1611745067.png?output-format=webp" loading="lazy" class="fyZwWD">
+            </div>
+            <p class="gQBtHL">
+              Follows all Max Safety measures for a Safe Packging And Dining experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+</section>
+
+
+<!-- deal section starts  -->
+
+<section class="deal" id="deal">
+
+    
+
+       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://img.freepik.com/free-photo/fresh-coffee-steams-wooden-table-close-up-generative-ai_188544-8923.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi-XQDp1y2z63gLQjqeNubMzTHwggzZTyhVw&s" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://www.thespicecollective.co/cdn/shop/articles/20220214182237-pav-20bhaji-20-20adobestock_547x.jpg?v=1644862961" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="content">
+        <div class="count-down">
+            <div class="box">
+                <h3 id="day">00</h3>
+                <span>day</span>
+            </div>
+            <div class="box">
+                <h3 id="hour">00</h3>
+                <span>hour</span>
+            </div>
+            <div class="box">
+                <h3 id="minute">00</h3>
+                <span>minute</span>
+            </div>
+            <div class="box">
+                <h3 id="second">00</h3>
+                <span>second</span>
+            </div>
+        </div>
+
+        <a href="#category1" class="btn">check the deal</a>
+
+    </div>
+
+</section>
+
+<!-- deal section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> us </h1>
+
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" placeholder="name">
+            <input type="email" placeholder="email">
+        </div>
+
+        <div class="inputBox">
+            <input type="number" placeholder="number">
+            <input type="text" placeholder="subject">
+        </div>
+
+        <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="send message" class="btn">
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- newsletter section starts  -->
+
+<section class="newsletter">
+
+    <h3>subscribe us for latest updates</h3>
+
+    <form action="">
+        <input class="box" type="email" placeholder="enter your email">
+        <input type="submit" value="subscribe" class="btn">
+    </form>
+
+</section>
+
+<!-- section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="#" class="logo"><i class="fas fa-utensils"></i>Quick Campus Bite</a>
+            <div class="share">
+                <a href="#" class="btn fab fa-facebook-f"></a>
+                <a href="#" class="btn fab fa-twitter"></a>
+                <a href="#" class="btn fab fa-instagram"></a>
+                <a href="#" class="btn fab fa-linkedin"></a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h3>our location</h3>
+            <div class="links">
+                <a href="#">india</a>
+                <a href="#">USA</a>
+                <a href="#">france</a>
+                <a href="#">japan</a>
+                <a href="#">russia</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <div class="links">
+                <a href="#">home</a>
+                <a href="#">category</a>
+                <a href="#">product</a>
+                <a href="#">deal</a>
+                <a href="#">contact</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>download app</h3>
+            <div class="links">
+                <a href="#">google play</a>
+                <a href="#">window xp</a>
+                <a href="#">app store</a>
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span> Tarun choudhary </span> | all rights reserved! </h1>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('.navbar');
+let header = document.querySelector('.header-2');
+
+menu.addEventListener('click', () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+});
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
+    if(window.scrollY > 150){
+        header.classList.add('active');
+    }else{
+        header.classList.remove('active');
+    }
+
+}
+let countDate = new Date('April 6, 2024 00:00:00').getTime();
+
+$(document).ready(function() {
+  function CountDown() {
+    let now = new Date().getTime();
+    let gap = countDate - now;
+
+    let second = 1000;
+    let minute = second * 60;
+    let hour = minute * 60;
+    let day = hour * 24;
+
+    let d = Math.floor(gap / (day));
+    let h = Math.floor((gap % (day)) / (hour));
+    let m = Math.floor((gap % (hour)) / (minute));
+    let s = Math.floor((gap % (minute)) / (second));
+
+    $('#day').text(d);
+    $('#hour').text(h);
+    $('#minute').text(m);
+    $('#second').text(s);
+  }
+
+  setInterval(function() {
+    CountDown();
+  }, 1000);
+});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.gieYfx').hover(
+      function() {
+        $(this).css({
+          'box-shadow': '0 8px 16px 0 rgba(0,0,0,0.2)',
+          'transform': 'scale(1.05)'
+        });
+      },
+      function() {
+        $(this).css({
+          'box-shadow': 'none',
+          'transform': 'scale(1)'
+        });
+      }
+    );
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $('.gieYfx').hover(
+      function() {
+        $(this).css({
+          'box-shadow': '0 8px 16px 0 rgba(0,0,0,0.2)',
+          'transform': 'scale(1.05)'
+        });
+      },
+      function() {
+        $(this).css({
+          'box-shadow': 'none',
+          'transform': 'scale(1)'
+        });
+      }
+    );
+  });
+</script>
+</script>
+{{!-- code to open the cart jquery --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Open cart when the shopping cart icon is clicked
+    $(".fa-shopping-cart").click(function(){
+        $(".cart").fadeIn();
+    });
+
+    // Close cart when the close button is clicked
+    $(".close-cart").click(function(){
+        $(".cart").fadeOut();
+    });
+});
+</script>
+{{!-- js logic to total the price and the other info to the cart --}}
+{{!-- jquery to add the data to the cart --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+
+     // Open cart when the shopping cart icon is clicked
+    $(".fa-shopping-cart").click(function(){
+        $("body").addClass("cart-open"); // Add class to body to fix background
+        $(".cart").fadeIn();
+    });
+
+    // Close cart when the close button or background overlay is clicked
+    $(".close-cart, .cart").click(function(event){
+        if ($(event.target).hasClass('cart') || $(event.target).hasClass('close-cart')) {
+            $("body").removeClass("cart-open"); // Remove class from body to allow scrolling
+            $(".cart").fadeOut();
+        }
+    });
+
+    // Add click event to order now button
+    $(".button").click(function(){
+        // Get the relevant information from the clicked div
+        var imageSrc = $(this).closest('.gieYfx').find('.fyZwWD').attr('src');
+        var itemName = $(this).closest('.gieYfx').find('.dFwWJC').text();
+        var cuisineType = $(this).closest('.gieYfx').find('.fDjWNG').text();
+        var priceText = $(this).closest('.gieYfx').find('.dHtbEm').text();
+        var location = $(this).closest('.gieYfx').find('.cOAsXn').text();
+        var openingHours = $(this).closest('.gieYfx').find('.iosCRN').text();
+
+        // Create HTML for the item to be added to the cart
+        var itemHTML = '<div class="cart-item" data-price="' + priceText + '">' +
+                            '<img src="' + imageSrc + '" alt="Item Image">' +
+                            '<div class="item-details">' + // Wrap the details in a div
+                                '<h3>' + itemName + '</h3>' +
+                                '<p>' + cuisineType + '</p>' +
+                                '<p>' + priceText + '</p>' +
+                                '<p>' + location + '</p>' +
+                                '<p>' + openingHours + '</p>' +
+                            '</div>' +
+                            '<button class="remove-item">Remove</button>' + // Add remove button
+                        '</div>';
+
+        // Append the item to the cart
+        $(".cart-items").append(itemHTML);
+        $(".cart-items .cart-item:last-child").css("border-bottom", "1px solid #ccc");
+        
+        // Extract the price from the text and convert it to an integer
+        var price = parseInt(priceText.match(/\d+/)[0]);
+
+        // Update the total price
+        var totalMoney = parseInt($(".total-price").text());
+        totalMoney += price;
+        $(".total-price").text(totalMoney);
+    });
+
+    // Add click event for remove item button
+    $(document).on("click", ".remove-item", function() {
+        // Get the price of the item being removed
+        var priceText = $(this).closest('.cart-item').data('price');
+        console.log("Price Text: " + priceText); // Debugging
+        var price = parseInt(priceText.match(/\d+/)[0]);
+        
+        // Update the total price
+        var totalMoney = parseInt($(".total-price").text());
+        totalMoney -= price;
+        $(".total-price").text(totalMoney);
+
+        // Remove the item from the cart
+        $(this).closest(".cart-item").remove();
+    });
+});
+
+</script>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+<script>
+$(document).ready(function(){
+        $('.datepicker').datepicker({
+        format: 'dd-mm-yyyy',
+        autoclose: true,
+        startDate: '0d'
+    }).on('changeDate', function(e) {
+        var selectedDate = e.date;
+        $('#selected-date').text('Selected Date: ' + selectedDate.toLocaleDateString());
+    });
+
+    $('.cell').click(function(){
+        $('.cell').removeClass('select');
+        $(this).addClass('select');
+
+        var selectedTime = $(this).text();
+        $('#selected-time').text('Selected Time: ' + selectedTime);
+    });
+
+
+//array to save all the data to array to send it to the reciver website api   
+$(".checkout-button").click(function(){
+    // Collect all cart items data
+    var cartItems = [];
+    $(".cart-item").each(function(){
+        var item = {
+            imageSrc: $(this).find('img').attr('src'),
+            itemName: $(this).find('h3').text(),
+            cuisineType: $(this).find('p:eq(0)').text(),
+            priceText: $(this).find('p:eq(1)').text(),
+            location: $(this).find('p:eq(2)').text(),
+            openingHours: $(this).find('p:eq(3)').text(),
+        };
+        cartItems.push(item);
+    });
+
+    // Collect selected date
+    var selectedDate = $("#selected-date").text().replace("Selected Date: ", "");
+
+    // Collect selected time
+    var selectedTime = $("#selected-time").text().replace("Selected Time: ", "");
+
+    // Collect packing/dining option
+    var packingDiningOption = $("input[name='exampleRadios']:checked").val();
+
+    // Collect total money
+    var totalMoney = $(".total-price").text();
+
+    // Send data to server using AJAX
+    $.ajax({
+        type: "POST",
+        url: "/index",
+        data: JSON.stringify({ 
+            cartItems: cartItems,
+            selectedDate: selectedDate,
+            selectedTime: selectedTime,
+            packingDiningOption: packingDiningOption,
+            totalMoney: totalMoney
+        }),
+        contentType: "application/json",
+        success: function(response) {
+            console.log("Data sent to MongoDB successfully:", response);
+            alert("Order saved Successfully");
+         window.location.href = '/payment'; 
+           
+        },
+        error: function(xhr, status, error) {
+            console.error("Error sending data to MongoDB:", error);
+            // Optionally, you can handle errors here
+        }
+    });
+   
+
+
+// Store data in sessionStorage 
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+    sessionStorage.setItem("selectedDate", selectedDate);
+    sessionStorage.setItem("selectedTime", selectedTime);
+    sessionStorage.setItem("packingDiningOption", packingDiningOption);
+    sessionStorage.setItem("totalMoney", totalMoney);
+
+    
+});
+
+
+
+    });
+
+</script> 
+<script>
+ // js to change heart
+    // Select the heart icon element
+     const heartIcon = document.getElementById("heartIcon");
+
+    // Add click event listener to the heart icon
+    heartIcon.addEventListener("click", function() {
+        // Change the color of the heart icon
+        heartIcon.style.color = "#ff0000"; // Change the color to red
+        heartIcon.style.transform = "scale(1.5)";
+
+      
+        setTimeout(function() {
+            heartIcon.style.transform = "scale(1)";
+        }, 200); 
+    });
+</script>
+
+
+
+    <script src="/public/index.js"></script>
+    
+</body>
+</html>
